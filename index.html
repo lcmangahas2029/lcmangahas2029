@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title> Travel Magazine - Home </title>
+        <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #d4e8fb; 
+        }
+        header {
+            background-color: #004d73;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        header h1 {
+            font-family: Georgia, serif; 
+        }
+        nav a {
+            margin: 0 12px;
+            color: #a9d4ff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .welcome-box {
+            background: #ffffff;
+            border-radius: 20px;
+            margin: 30px auto 0;
+            padding: 1px 25px;
+            width: 80%;
+            text-align: center;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+        }
+        .welcome-box h2 {
+            color: #004d73;
+            font-family: "Trebuchet MS", sans-serif;
+        }
+        .welcome-box p {
+            color: #004d73;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 20px;
+            padding: 30px;
+        }
+        .tile {
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); 
+            text-decoration: none; 
+            color: inherit;
+            display: block;
+        }
+        /* clickable ones */
+        a.tile {
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            cursor: pointer;
+        }
+        a.tile:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+        }
+        .tile.large {
+            grid-row: span 2;
+        }
+        .tile h2 {
+            margin-top: 10px;
+            font-family: "Trebuchet MS", sans-serif;
+        }
+
+        .tile img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 12px;
+            margin-bottom: 12px;
+        }
+
+        /* make only the Why Travel images taller */
+        .why-img {
+            height: 250px !important;
+        }
+
+        .tile.white { background: #ffffff; }
+        .tile.yellow { background: #fff8b3; }   
+        .tile.purple { background: #e3d4f9; }  
+        .tile.brown { background: #efd6b5; }  
+        .tile.green { background: #d6f5d6; }  
+
+        .tile.white h2, .tile.white p { color: #535353; }  
+        .tile.yellow h2, .tile.yellow p { color: #b38f00; }  
+        .tile.purple h2, .tile.purple p { color: #5a2d82; }  
+        .tile.brown h2, .tile.brown p { color: #5c3b1e; }   
+        .tile.green h2, .tile.green p { color: #1e6b1e; }  
+        
+        footer {
+            background: #004d73;
+            color: #ddd;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <h1>Welcome to Travel Magazine</h1>
+            <nav>
+                <a href="index.html"> Home </a>
+                <a href="about.html"> About </a>
+                <a href="nature.html"> Nature </a>
+                <a href="city.html"> City </a>
+                <a href="cultural.html"> Cultural </a>
+                <a href="amusement.html"> Amusement </a>
+                <a href="references.html"> References </a>
+            </nav>
+        </header>
+
+        <section class="welcome-box">
+            <h2> Hello, Traveler! </h2>
+            <p> Discover new destinations, exciting cultures, and breathtaking adventures in this insightful magazine. </p>
+        </section>
+  
+        <section class="grid">
+            <!-- Why Travel tile with two stacked images -->
+            <div class="tile large white">
+                <h2> Why Travel? </h2>
+                <p> Travel opens your mind, heart, and soul to new experiences. Visiting different places allows you to discover new cultures, meet people, and learn from diverse perspectives. </p>
+                <img class="why-img" src="https://upload.wikimedia.org/wikipedia/commons/3/36/United_Airlines_Boeing_777-200_Meulemans.jpg" alt="Airplane Travel">
+                <img class="why-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/MF_Skania_2.jpg/500px-MF_Skania_2.jpg" alt="Backpacker Adventure">
+            </div>
+
+            <a href="nature.html" class="tile yellow">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Man_o%27war_cove_near_lulworth_dorset_arp.jpg/1920px-Man_o%27war_cove_near_lulworth_dorset_arp.jpg" alt="Nature Trips">
+                <h2> Nature Trips </h2>
+                <p> Beaches, mountains, waterfalls, and lakes. </p>
+            </a>
+
+            <a href="city.html" class="tile purple">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/New_york_times_square-terabass.jpg/960px-New_york_times_square-terabass.jpg" alt="City Adventures">
+                <h2> City Adventures </h2>
+                <p> Nightlife, skyscrapers, shopping districts, and food tours. </p>
+            </a>
+
+            <a href="cultural.html" class="tile brown">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Gallery_of_19th-Century_Polish_Art_in_the_Sukiennice%2C_2022%2C_06.jpg/2560px-Gallery_of_19th-Century_Polish_Art_in_the_Sukiennice%2C_2022%2C_06.jpg" alt="Cultural Journeys">
+                <h2> Cultural Explorations </h2>
+                <p> Ancient ruins, museums, churches, and landmarks. </p>
+            </a>
+
+            <a href="amusement.html" class="tile green">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/c/cc/Tivoligardens2.jpg" alt="Amusement Parks">
+                <h2> Amusement Parks </h2>
+                <p> Theme parks, zoos, and aquariums. </p>
+            </a>
+        </section>
+
+        <footer>
+            © 2025 Travel Magazine
+        </footer>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
